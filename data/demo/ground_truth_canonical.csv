@@ -1,0 +1,12 @@
+canonical_id,category,item_type,material,grade,size,specification,member_ids
+CAN-001,Fastener,Hex Bolt,Stainless Steel,316,M16,50 mm,A001|B101|C201
+CAN-002,Bearing,Deep Groove Ball Bearing,Steel,,6205,2RS,A002|B102|C202
+CAN-003,Seal,Mechanical Seal,Viton,,DN50,,A003|B103|C203
+CAN-004,Pipe,Seamless Pipe,Carbon Steel,,2 inch,Sch 40,A004|B104|C204
+CAN-005,Valve,Gate Valve,Carbon Steel,,3 inch,Class 150,A005|C205
+CAN-006,Fastener,Hex Nut,Stainless Steel,316,M16,,A006|B106|C206
+CAN-007,Gasket,Spiral Wound Gasket,Stainless Steel,316,DN50,,A007|B107|C207
+CAN-008,Electrical,Power Cable,Copper,,4C x 16 sq mm,,A008|B108|C208
+CAN-009,Flange,Weld Neck Flange,Carbon Steel,,2 inch,Class 150,A009|B109|C209
+CAN-010,Fastener,Hex Bolt,Stainless Steel,304,M16,50 mm,A010|C210
+CAN-011,Fastener,Hex Bolt,Stainless Steel,316,M16,100 mm,B110

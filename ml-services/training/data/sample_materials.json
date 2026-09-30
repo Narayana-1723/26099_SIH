@@ -1,0 +1,70 @@
+[
+  {
+    "materialCode": "MAT-001",
+    "rawDescription": "M16 HEX BOLT SS316 X 50MM",
+    "category": "Mechanical",
+    "subcategory": "Fasteners",
+    "class": "Bolts",
+    "attributes": {
+      "itemType": "Hex Bolt",
+      "material": "Stainless Steel",
+      "grade": "316",
+      "diameter": "M16",
+      "length": "50 mm"
+    }
+  },
+  {
+    "materialCode": "MAT-002",
+    "rawDescription": "STAINLESS STEEL 316 HEX BOLT M16 50MM",
+    "category": "Mechanical",
+    "subcategory": "Fasteners",
+    "class": "Bolts",
+    "attributes": {
+      "itemType": "Hex Bolt",
+      "material": "Stainless Steel",
+      "grade": "316",
+      "diameter": "M16",
+      "length": "50 mm"
+    }
+  },
+  {
+    "materialCode": "MAT-003",
+    "rawDescription": "M16 HEX BOLT SS316 X 100MM",
+    "category": "Mechanical",
+    "subcategory": "Fasteners",
+    "class": "Bolts",
+    "attributes": {
+      "itemType": "Hex Bolt",
+      "material": "Stainless Steel",
+      "grade": "316",
+      "diameter": "M16",
+      "length": "100 mm"
+    }
+  },
+  {
+    "materialCode": "MAT-004",
+    "rawDescription": "BALL VALVE 2 INCH CLASS 150 FLANGED RF SS316",
+    "category": "Mechanical",
+    "subcategory": "Valves",
+    "class": "Ball Valves",
+    "attributes": {
+      "itemType": "Ball Valve",
+      "material": "Stainless Steel",
+      "grade": "316",
+      "diameter": "2 inch",
+      "pressureClass": "Class 150"
+    }
+  },
+  {
+    "materialCode": "MAT-005",
+    "rawDescription": "COPPER POWER CABLE 4 CORE 16 SQ MM XLPE 1100V",
+    "category": "Electrical",
+    "subcategory": "Cables & Wires",
+    "class": "Power Cables",
+    "attributes": {
+      "itemType": "Power Cable",
+      "material": "Copper",
+      "voltage": "1100 V"
+    }
+  }
+]

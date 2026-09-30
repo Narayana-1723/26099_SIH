@@ -1,0 +1,11 @@
+material_id,cpse,original_code,description,category,item_type,material,grade,size,specification,quantity
+A001,ONGC,BOLT-HEX-SS316-M16X50,SS316 M16 HEX BOLT 50MM,Fastener,Hex Bolt,Stainless Steel,316,M16,50 mm,10
+A002,ONGC,BRG-6205-2RS,SKF 6205 2RS DEEP GROOVE BALL BEARING,Bearing,Deep Groove Ball Bearing,Steel,,6205,2RS,25
+A003,ONGC,SEAL-MECH-DN50-VITON,MECH SEAL DN50 VITON,Seal,Mechanical Seal,Viton,,DN50,,8
+A004,ONGC,PIPE-CS-2IN-SCH40,CARBON STEEL PIPE 2 INCH SCH 40,Pipe,Seamless Pipe,Carbon Steel,,2 inch,Sch 40,14
+A005,ONGC,VALVE-GATE-3IN-150,GATE VALVE 3 IN 150 CLASS CS,Valve,Gate Valve,Carbon Steel,,3 inch,Class 150,6
+A006,ONGC,NUT-HEX-M16-SS316,SS316 HEX NUT M16,Fastener,Hex Nut,Stainless Steel,316,M16,,40
+A007,ONGC,GASKET-SPW-50-316,SPIRAL WOUND GASKET DN50 SS316,Gasket,Spiral Wound Gasket,Stainless Steel,316,DN50,,12
+A008,ONGC,CABLE-XLPE-4C-16,XLPE 4 CORE 16 SQMM POWER CABLE,Electrical,Power Cable,Copper,,4C x 16 sq mm,,100
+A009,ONGC,FLANGE-WN-2-150,WELD NECK FLANGE 2 IN CL150,Flange,Weld Neck Flange,Carbon Steel,,2 inch,Class 150,20
+A010,ONGC,BOLT-HEX-SS304-M16X50,HEX BOLT M16 X 50 SS304,Fastener,Hex Bolt,Stainless Steel,304,M16,50 mm,15

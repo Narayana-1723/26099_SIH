@@ -1,0 +1,23 @@
+# Core FastAPI Microservice Dependencies
+fastapi>=0.110.0,<1.0.0
+uvicorn[standard]>=0.28.0,<1.0.0
+pydantic>=2.6.0,<3.0.0
+pydantic-settings>=2.2.0,<3.0.0
+python-dotenv>=1.0.0,<2.0.0
+
+# Scientific & Traditional ML Computing
+numpy>=1.26.0,<2.0.0
+pandas>=2.2.0,<3.0.0
+scikit-learn>=1.4.0,<2.0.0
+scipy>=1.12.0,<2.0.0
+
+# HTTP Client & Testing
+httpx>=0.27.0,<1.0.0
+pytest>=8.0.0,<9.0.0
+pytest-asyncio>=0.23.0,<1.0.0
+
+# Deep Learning / NLP
+# Note: For production GPU or CPU Sentence-Transformers support, install:
+# pip install sentence-transformers torch
+# The service automatically detects sentence-transformers if installed,
+# otherwise seamlessly utilizes the scikit-learn TF-IDF baseline embedding engine.

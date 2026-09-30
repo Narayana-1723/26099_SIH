@@ -1,0 +1,11 @@
+material_id,cpse,original_code,description,category,item_type,material,grade,size,specification,quantity
+C201,NTPC,M16-50-SS316-HEX-B,M16 50MM SS316 HEX BOLT,Fastener,Hex Bolt,Stainless Steel,316,M16,50 mm,30
+C202,NTPC,BRG-6205-2RS-BALL,6205 2RS BALL BEARING DEEP GROOVE,Bearing,Deep Groove Ball Bearing,Steel,,6205,2RS,17
+C203,NTPC,MECH-SEAL-50-DN-VITON,DN50 MECHANICAL SEAL VITON,Seal,Mechanical Seal,Viton,,DN50,,7
+C204,NTPC,PIPE-2IN-CS-S40,2 IN CARBON STEEL PIPE SCHEDULE 40,Pipe,Seamless Pipe,Carbon Steel,,2 inch,Sch 40,16
+C205,NTPC,GV-3IN-150-CS,CS GATE VALVE 3IN CLASS 150,Valve,Gate Valve,Carbon Steel,,3 inch,Class 150,8
+C206,NTPC,M16-SS316-HEX-NUT,M16 SS316 HEX NUT,Fastener,Hex Nut,Stainless Steel,316,M16,,50
+C207,NTPC,GASKET-DN50-SW-316,DN50 SW GASKET SS316,Gasket,Spiral Wound Gasket,Stainless Steel,316,DN50,,15
+C208,NTPC,CABLE-XLPE-4CORE-16MM2,XLPE 4 CORE 16 MM2 POWER CABLE,Electrical,Power Cable,Copper,,4C x 16 sq mm,,120
+C209,NTPC,FLG-WN-2IN-CL150,2 INCH WN FLANGE CLASS 150,Flange,Weld Neck Flange,Carbon Steel,,2 inch,Class 150,21
+C210,NTPC,BOLT-M16-50-SS304,SS304 M16 HEX BOLT 50MM,Fastener,Hex Bolt,Stainless Steel,304,M16,50 mm,12
