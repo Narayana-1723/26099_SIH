@@ -1,0 +1,15 @@
+CREATE TABLE IF NOT EXISTS cpse (
+    id BIGSERIAL PRIMARY KEY,
+    name VARCHAR(150) NOT NULL,
+    code VARCHAR(50) NOT NULL UNIQUE,
+    description TEXT,
+    active BOOLEAN NOT NULL DEFAULT TRUE,
+    created_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    updated_at TIMESTAMP WITH TIME ZONE NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE INDEX IF NOT EXISTS idx_cpse_code ON cpse(code);
+CREATE INDEX IF NOT EXISTS idx_cpse_active ON cpse(active);
+
+-- Add foreign key from users to cpse
+ALTER TABLE users ADD CONSTRAINT fk_users_cpse FOREIGN KEY (cpse_id) REFERENCES cpse(id) ON DELETE SET NULL;

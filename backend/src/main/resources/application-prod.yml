@@ -1,0 +1,6 @@
+# Production must supply unique values for each initial seeded account.
+app:
+  seed:
+    admin-password: ${SEED_ADMIN_PASSWORD}
+    reviewer-password: ${SEED_REVIEWER_PASSWORD}
+    user-password: ${SEED_USER_PASSWORD}
