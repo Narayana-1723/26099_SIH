@@ -25,10 +25,14 @@ public class DataInitializer implements CommandLineRunner {
     private final String reviewerPassword;
     private final String userPassword;
 
-    public DataInitializer(UserRepository userRepository, CpseRepository cpseRepository, PasswordEncoder passwordEncoder,
-                           @Value("${app.seed.admin-password}") String adminPassword,
-                           @Value("${app.seed.reviewer-password}") String reviewerPassword,
-                           @Value("${app.seed.user-password}") String userPassword) {
+    public DataInitializer(
+            UserRepository userRepository,
+            CpseRepository cpseRepository,
+            PasswordEncoder passwordEncoder,
+            @Value("${app.seed.admin-password}") String adminPassword,
+            @Value("${app.seed.reviewer-password}") String reviewerPassword,
+            @Value("${app.seed.user-password}") String userPassword) {
+
         this.userRepository = userRepository;
         this.cpseRepository = cpseRepository;
         this.passwordEncoder = passwordEncoder;
@@ -39,45 +43,101 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
+
         // Ensure default CPSE exists
         if (cpseRepository.count() == 0) {
-            cpseRepository.save(Cpse.builder()
-                    .name("Oil and Natural Gas Corporation")
-                    .code("ONGC")
-                    .description("Indian central public sector undertaking under Ministry of Petroleum")
-                    .active(true)
-                    .build());
+
+            cpseRepository.save(
+                    Cpse.builder()
+                            .name("Oil and Natural Gas Corporation")
+                            .code("ONGC")
+                            .description(
+                                    "Indian central public sector undertaking under Ministry of Petroleum"
+                            )
+                            .active(true)
+                            .build()
+            );
         }
 
         // Seed or verify default users
-        createOrUpdateUser("ADM001", "System Administrator", "admin@sih.gov.in", adminPassword, "ADMIN", 1L);
-        createOrUpdateUser("REV001", "Senior Material Reviewer", "reviewer@sih.gov.in", reviewerPassword, "REVIEWER", 1L);
-        createOrUpdateUser("USR001", "Standard CPSE Officer", "user@ongc.in", userPassword, "USER", 1L);
+        createOrUpdateUser(
+                "ADM001",
+                "System Administrator",
+                "admin@sih.gov.in",
+                adminPassword,
+                "ADMIN",
+                1L
+        );
 
-        log.info("Seed users verified: ADM001 (ADMIN), REV001 (REVIEWER), USR001 (USER)");
+        createOrUpdateUser(
+                "REV001",
+                "Senior Material Reviewer",
+                "reviewer@sih.gov.in",
+                reviewerPassword,
+                "REVIEWER",
+                1L
+        );
+
+        createOrUpdateUser(
+                "USR001",
+                "Standard CPSE Officer",
+                "user@ongc.in",
+                userPassword,
+                "USER",
+                1L
+        );
+
+        log.info(
+                "Seed users verified: ADM001 (ADMIN), REV001 (REVIEWER), USR001 (USER)"
+        );
     }
 
-    private void createOrUpdateUser(String empId, String name, String email, String plainPassword, String role, Long cpseId) {
-        Optional<User> existing = userRepository.findByEmployeeId(empId);
+    private void createOrUpdateUser(
+            String empId,
+            String name,
+            String email,
+            String plainPassword,
+            String role,
+            Long cpseId) {
+
+        Optional<User> existing =
+                userRepository.findByEmployeeId(empId);
+
         if (existing.isEmpty()) {
+
             User user = User.builder()
                     .employeeId(empId)
                     .name(name)
                     .email(email)
-                    .passwordHash(passwordEncoder.encode(plainPassword))
+                    .passwordHash(
+                            passwordEncoder.encode(plainPassword)
+                    )
                     .role(role)
                     .cpseId(cpseId)
                     .active(true)
                     .build();
+
             userRepository.save(user);
+
+            log.info("Created seed user: {}", empId);
+
         } else {
-            // Rotate only the known development seed password. Do not reset passwords
-            // on every production restart after the initial migration.
+
             User user = existing.get();
-            if (passwordEncoder.matches("password", user.getPasswordHash())
-                    && !passwordEncoder.matches(plainPassword, user.getPasswordHash())) {
-                user.setPasswordHash(passwordEncoder.encode(plainPassword));
+
+            // Update password when the configured seed password
+            // does not match the password currently stored in DB.
+            if (!passwordEncoder.matches(
+                    plainPassword,
+                    user.getPasswordHash())) {
+
+                user.setPasswordHash(
+                        passwordEncoder.encode(plainPassword)
+                );
+
                 userRepository.save(user);
+
+                log.info("Updated seed password for user: {}", empId);
             }
         }
     }
